@@ -1,0 +1,76 @@
+/* div{
+    background-image: url('/assets/Images/Bg_img.avif');
+   background-repeat: no-repeat;
+     height: 200vh;
+     width: 200vh;
+} */
+
+/* .header-top{
+    height: 50px; 
+    width: fit-content; 
+    border-radius: 25% 10%;
+} */
+.card {
+    position: relative;
+}
+
+.plus-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: skyblue;
+}
+
+.modal-title {
+    color: darkgoldenrod;
+    font-size: x-large;
+}
+
+table {
+    width: 100%;
+}
+
+tbody {
+    border-width: 2px;
+}
+
+th {
+    border-width: 2px;
+}
+
+.remove-border {
+    padding: 5px;
+    border: none;
+    background: none;
+}
+
+/* Image Css */
+img{
+    height: 16vh;
+    width: 240px;
+    margin-left: 70px;
+}  
+
+.progress{
+    margin-top: 8px;
+}
+
+.mat-button{
+    display: table-cell;
+    margin-top: 5px;
+}
+
+#mat-dialog{
+    width: 500px;
+    overflow: hidden;
+}
+
+.closebtn{
+  margin-top: 8px;
+}
+
+#picture__input{
+    width: 55%;
+    margin-left: 77px;
+}
+  

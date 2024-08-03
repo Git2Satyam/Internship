@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-body">
+        <h2>OrderDetail</h2>
+    <ul class="order">
+        <li class="d-flex justify-content-between">Receipt Number:<span>{{orderData.Receipt}}</span></li><br>
+        <li class="d-flex justify-content-between">Total Amount paid:<span>{{orderData.cartModel.GrandTotal}}</span></li><br>
+        <li class="d-flex justify-content-between">Currency<span>{{orderData.Currency}}</span></li><br>
+        <!-- <li class="d-flex justify-content-between">Item:<span></span></li><br>
+        <li class="d-flex justify-content-between">Quantity<span ></span></li><br> -->
+        <li class="d-flex justify-content-between">Customer Name<span></span></li><br>
+        <li class="d-flex justify-content-between">Email<span>{{user.username}}</span></li>
+    </ul>
+    <div>
+        <a routerLink="/" style="text-decoration: none;">Go back to shopping</a>
+    </div>
+    </div>
+</div>

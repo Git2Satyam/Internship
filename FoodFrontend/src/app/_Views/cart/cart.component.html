@@ -1,0 +1,111 @@
+<div class="row mt-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="col-sm-12">
+                <h2 style="text-align: left;">Cart: {{itemCount}} Item</h2>
+            </div>
+            <div class="card-body">
+                <div *ngIf="itemCount == 0" class="emptyCart">
+                    <div class="alignment">
+                        <img src="../assets/Images/EmptyCart.png">
+                        <h2>Your cart is empty</h2>
+                        <a routerLink="/" style="text-decoration: none;">Go to shopping</a>
+                    </div>
+                   
+                </div>
+                <div class="row mb-5" *ngFor="let item of cartItemList let i = index">
+                    <div class="col-md-2">
+                        <div class="col-md-2">
+                            <img class="img-cart" src="{{item.ImageUrl}}" alt="Sample">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <span>
+                            <h3>Name: {{item.Name}}</h3>
+                        </span>
+                        <span>
+                            <h3>Unit Price: {{item.UnitPrice}}</h3>
+                        </span>
+                        <button mat-flat-button color="warn" class="mt-2"
+                        (click)="delteItemfromCart(item.Id)"><mat-icon>delete</mat-icon></button>
+                    </div>
+                    <div class="col-md-2">
+                        <div>
+                            <div class="quantity">
+                                <button class="btn btn-dark" (click)="quantityCount('min', i, item)"><strong>-</strong></button>
+                                <input class="input-box" type="text" disabled value="{{item.Quantity}}">
+                                <button class="btn btn-dark" (click)="quantityCount('max', i, item)"><strong>+</strong></button>
+                            </div>
+                           
+                            <span>
+                                <h3>Total Price: {{item.TotalPrice}}</h3>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card" *ngIf="itemCount > 0">
+            <div class="card-body">
+                <h2>Order Summary</h2>
+                 <ul >
+                    <li class="d-flex justify-content-between">Amount  <span>{{cartDetail?.TotalPrice}}</span></li>
+                    <li class="d-flex justify-content-between">Tax@5% <span>{{cartDetail?.Tax}}</span></li>
+                    <li class="d-flex justify-content-between">GrandTotal  <span>{{cartDetail?.GrandTotal}}</span></li>
+                 </ul>
+                 <button class="btn btn-primary" (click)="checkout()">Checkout</button>
+            </div>
+
+        </div>
+
+    </div>
+   
+</div>
+
+
+<div class="card address-card" *ngIf="showForm">
+    <div class="card-body">
+        <h3>Address</h3>
+        <form [formGroup]="addressForm" (ngSubmit)="submitForm" class="pt-3">
+            <div class="form-group addressForm">
+                <div class="input-field">
+                    <input formControlName="houseAddress" name="houseAddress" type="text" placeholder="Address"><br>
+                    <small *ngIf="addressForm.controls['houseAddress'].dirty && addressForm.controls['houseAddress']?.touched && addressForm.hasError('required','houseAddress')"
+                    class="text-danger">*Username is required*</small>
+                    <small *ngIf="addressForm.controls['houseAddress'].hasError('maxlength')" class="text-danger">
+                      This field must have at most 50 characters.
+                    </small> 
+                </div>
+                <div class="input-field pt-3">
+                    <input formControlName="zipcode" type="text" placeholder="Enter zipcode"><br>
+                    <small *ngIf="addressForm.controls['zipcode'].dirty && addressForm.controls['zipcode'].touched && addressForm.hasError('required', 'zipcode') "
+                    class="text-danger">zipcode is required</small>
+                </div>
+                <div class="input-field pt-3">
+                    <input formControlName="state" type="text" placeholder="Enter State"><br>
+                    <small *ngIf="addressForm.controls['state'].dirty && addressForm.controls['state'].touched && addressForm.hasError('required', 'state') "
+                    class="text-danger">State is required</small>
+                </div>
+                <div class="input-field pt-3">
+                    <input formControlName="country" type="text" placeholder="Enter Country"><br>
+                    <small *ngIf="addressForm.controls['country'].dirty && addressForm.controls['country'].touched && addressForm.hasError('required', 'country') "
+                    class="text-danger">Country is required</small>
+                </div>
+                <div class="input-field pt-3">
+                    <input formControlName="phoneNumber" type="text" placeholder="Enter PhoneNumber"><br>
+                    <small *ngIf="addressForm.controls['phoneNumber'].dirty && addressForm.controls['phoneNumber'].touched && addressForm.hasError('required', 'phoneNumber') "
+                    class="text-danger">Phone Number is required</small>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3" (click)="submitForm()">submit</button>
+            <button class="btn btn-primary mt-3 ms-3" id="close-btn" (click)="closeForm()">close</button>
+
+        </form>
+    </div>
+</div>
+
+
+<ngx-loading [show]="loading"></ngx-loading>

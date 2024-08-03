@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Internship\\YummyFoodApp\\YummyFoodApp\\wwwroot\\UploadImages\\Product\\152FrenchFries.png",
+      "PackagePath": "staticwebassets\\UploadImages\\Product\\152FrenchFries.png"
+    },
+    {
+      "Id": "D:\\Internship\\YummyFoodApp\\YummyFoodApp\\wwwroot\\UploadImages\\Product\\chole-bhature.png",
+      "PackagePath": "staticwebassets\\UploadImages\\Product\\chole-bhature.png"
+    },
+    {
+      "Id": "D:\\Internship\\YummyFoodApp\\YummyFoodApp\\wwwroot\\UploadImages\\Product\\curry.png",
+      "PackagePath": "staticwebassets\\UploadImages\\Product\\curry.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.YummyFoodApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.YummyFoodApp.props",
+      "PackagePath": "build\\YummyFoodApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.YummyFoodApp.props",
+      "PackagePath": "buildMultiTargeting\\YummyFoodApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.YummyFoodApp.props",
+      "PackagePath": "buildTransitive\\YummyFoodApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

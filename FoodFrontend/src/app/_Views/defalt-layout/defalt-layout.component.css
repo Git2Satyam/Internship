@@ -1,0 +1,43 @@
+.img-fluid{
+    height: 200px;
+    width: 500px;
+    margin-left: 200px;
+    border-radius: 2%;
+}
+
+.container{
+    margin-left:0%;
+}
+
+a{
+    color: black;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.noti_counter {
+    background-color: #ec5252;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.43;
+    margin: -8px 1px 1px 0;
+    padding: 0px 7px;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+#logout{
+    position: relative;
+    margin-right: 50px;
+}
+
+.ulnav{
+    font-size: large;
+}
+
+
+

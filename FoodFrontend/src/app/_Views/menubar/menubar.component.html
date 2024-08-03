@@ -1,0 +1,41 @@
+<mat-toolbar color="primary">
+    <button (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-drawer-container autosize>
+  <mat-drawer #drawer opened="false" mode="side">
+    <mat-nav-list>
+       <mat-list-item>
+         <button><mat-icon>dashboard</mat-icon>Dashboard</button>
+       </mat-list-item>
+       <mat-list-item>
+        <button routerLink=""><mat-icon>home</mat-icon>Home</button>
+      </mat-list-item>
+       <mat-list-item>
+        <button routerLink="Admin"><mat-icon>person</mat-icon>Administrator</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button routerLink="User"><mat-icon>person</mat-icon>User</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button routerLink="chart"><mat-icon>trending_up</mat-icon>Chart</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button><mat-icon>settings</mat-icon>Settings</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button><mat-icon>help</mat-icon>Help</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button><mat-icon>analytics</mat-icon>Analytics</button>
+      </mat-list-item>
+    </mat-nav-list>
+
+  </mat-drawer>
+  <mat-drawer-content>
+    <div style="text-align: center;min-height: 860px; min-width: 300px; overflow: hidden;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,17 @@
+D:\Internship\YummyFoodApp\YummyFood.DAL\bin\Debug\net6.0\YummyFood.DAL.deps.json
+D:\Internship\YummyFoodApp\YummyFood.DAL\bin\Debug\net6.0\YummyFood.DAL.dll
+D:\Internship\YummyFoodApp\YummyFood.DAL\bin\Debug\net6.0\YummyFood.DAL.pdb
+D:\Internship\YummyFoodApp\YummyFood.DAL\bin\Debug\net6.0\YummyFood.Core.dll
+D:\Internship\YummyFoodApp\YummyFood.DAL\bin\Debug\net6.0\YummyFood.Models.dll
+D:\Internship\YummyFoodApp\YummyFood.DAL\bin\Debug\net6.0\YummyFood.Core.pdb
+D:\Internship\YummyFoodApp\YummyFood.DAL\bin\Debug\net6.0\YummyFood.Models.pdb
+D:\Internship\YummyFoodApp\YummyFood.DAL\obj\Debug\net6.0\YummyFood.DAL.csproj.AssemblyReference.cache
+D:\Internship\YummyFoodApp\YummyFood.DAL\obj\Debug\net6.0\YummyFood.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Internship\YummyFoodApp\YummyFood.DAL\obj\Debug\net6.0\YummyFood.DAL.AssemblyInfoInputs.cache
+D:\Internship\YummyFoodApp\YummyFood.DAL\obj\Debug\net6.0\YummyFood.DAL.AssemblyInfo.cs
+D:\Internship\YummyFoodApp\YummyFood.DAL\obj\Debug\net6.0\YummyFood.DAL.csproj.CoreCompileInputs.cache
+D:\Internship\YummyFoodApp\YummyFood.DAL\obj\Debug\net6.0\YummyFood.DAL.csproj.CopyComplete
+D:\Internship\YummyFoodApp\YummyFood.DAL\obj\Debug\net6.0\YummyFood.DAL.dll
+D:\Internship\YummyFoodApp\YummyFood.DAL\obj\Debug\net6.0\refint\YummyFood.DAL.dll
+D:\Internship\YummyFoodApp\YummyFood.DAL\obj\Debug\net6.0\YummyFood.DAL.pdb
+D:\Internship\YummyFoodApp\YummyFood.DAL\obj\Debug\net6.0\ref\YummyFood.DAL.dll

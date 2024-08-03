@@ -1,0 +1,79 @@
+<div clas="card">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <img src="../assets/Images/top-header.jpg" alt="header-top"
+                style="height: 50px; width: auto; border-radius: 25% 10%;" />
+            <small style="color: black; font-weight: 700; font-size: 1.5em;">YummyFood</small>
+
+            <form style="margin-left: 400px;" class="d-flex">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                    style="margin-left: 5px;">Search</button>
+            </form>
+            <ul class="navbar nav ulnav">
+                <li class="nav-item">
+                    <a style="margin-left: 250px;" routerLink="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a style="margin-left:20px;" routerLink="signup">Signup</a>
+                </li>
+            </ul>
+
+        </div>
+        <span style="margin-right:250px;">
+            <fa-icon [icon]="shopping" class="fa-2x" routerLink="/cart">0</fa-icon>
+            <span class="noti_counter">{{itemLength}}</span>
+        </span>
+    <!-- <div class="nav-item dropdown" dropdown-placement="bottom-right" id="logout">
+        <span class="dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <fa-icon [icon]="setting" class="fa-2x"></fa-icon>
+        </span>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" (click)="Signout()">Logout</a></li>
+            <li><a class="dropdown-item" routerLink="Admin">Admin</a></li>
+            <li><a class="dropdown-item" routerLink="User">User</a></li>
+        </ul>
+    </div> -->
+        <span id="logout" (click)="Signout()">
+            <fa-icon [icon]="signout" class="fa-2x"></fa-icon>
+        </span>
+
+    </nav>
+    <div style="background:#1a5ca3;">
+        <div class="container pt-4 pb-3">
+            <div class="row">
+                <div class="col-sm-8" style="color: burlywood;">
+                    <h1>Yummy Food Hub's Online Ordering WebSite!</h1>
+                    <p class="pb-4" style="color:burlywood;">
+                        Yummy Food delivered fast at your door step!
+                    </p>
+                    <p>
+                        <a href="#heading" class="btn btn-success">ORDER ONLINE NOW</a>
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="..\assets\Images\header_img2.jpg" alt="headerImg" class="img-fluid" />
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="">
+    <h2>Pizza,Desserts and Beverages</h2>
+    <div class="row mt-4">
+        <div class="col-sm" *ngFor="let items of productImages">
+            <div class="card mb-4" style="width: 18rem;">
+                <img src="{{items.ImageUrl}}" class="card-img-top" alt="..." style="height: 270px; width: 286px;">
+                <div class="card-body">
+                    <h5 class="card-title">{{items.Name}}</h5>
+                    <p class="card-text">{{items.Description}}</p>
+                    <p>{{items.UnitPrice}}</p>
+                    <a class="btn btn-primary" (click)="addToCart(items.Id, items.UnitPrice)">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

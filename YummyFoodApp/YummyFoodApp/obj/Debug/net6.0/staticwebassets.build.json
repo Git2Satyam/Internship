@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "Q5KRD4MtM5i/0xFjL1HK8VO93lfoY8LBye0d1Es5l/E=",
+  "Source": "YummyFoodApp",
+  "BasePath": "_content/YummyFoodApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "YummyFoodApp\\wwwroot",
+      "Source": "YummyFoodApp",
+      "ContentRoot": "D:\\Internship\\YummyFoodApp\\YummyFoodApp\\wwwroot\\",
+      "BasePath": "_content/YummyFoodApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Internship\\YummyFoodApp\\YummyFoodApp\\wwwroot\\UploadImages\\Product\\152FrenchFries.png",
+      "SourceId": "YummyFoodApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Internship\\YummyFoodApp\\YummyFoodApp\\wwwroot\\",
+      "BasePath": "_content/YummyFoodApp",
+      "RelativePath": "UploadImages/Product/152FrenchFries.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UploadImages\\Product\\152FrenchFries.png"
+    },
+    {
+      "Identity": "D:\\Internship\\YummyFoodApp\\YummyFoodApp\\wwwroot\\UploadImages\\Product\\chole-bhature.png",
+      "SourceId": "YummyFoodApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Internship\\YummyFoodApp\\YummyFoodApp\\wwwroot\\",
+      "BasePath": "_content/YummyFoodApp",
+      "RelativePath": "UploadImages/Product/chole-bhature.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UploadImages\\Product\\chole-bhature.png"
+    },
+    {
+      "Identity": "D:\\Internship\\YummyFoodApp\\YummyFoodApp\\wwwroot\\UploadImages\\Product\\curry.png",
+      "SourceId": "YummyFoodApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Internship\\YummyFoodApp\\YummyFoodApp\\wwwroot\\",
+      "BasePath": "_content/YummyFoodApp",
+      "RelativePath": "UploadImages/Product/curry.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UploadImages\\Product\\curry.png"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+<div class="demo-button-container">
+    <button mat-raised-button class="mat_button" (click)="addUser()"><mat-icon>person_add</mat-icon></button>
+  </div>
+
+  <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef>S.No</th>
+      <td mat-cell *matCellDef="let element; index as i">{{paginator.pageSize * paginator.pageIndex + i + 1}}</td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="FirstName">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>FirstName</th>
+      <td mat-cell *matCellDef="let element">{{element.FirstName}}</td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="LastName">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>LastName</th>
+      <td mat-cell *matCellDef="let element">{{element.LastName}}</td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Email">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let element">{{element.Email}}</td>
+    </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="PhoneNumber">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>PhoneNumber</th>
+        <td mat-cell *matCellDef="let element">{{element.PhoneNumber}}</td>
+      </ng-container>
+
+        <!-- Symbol Column -->
+    <ng-container matColumnDef="Status">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Status</th>
+        <td mat-cell *matCellDef="let element">
+            <span *ngIf="element.Enabled == true" class="badge bg-success">Active</span>
+            <span *ngIf="element.Enabled == false" class="badge bg-warning">InActive</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element">
+            <button class="remove-border" style="color: cornflowerblue;">
+                <fa-icon [icon]="edit" class="fa-lg"  (click)="editUser(element.Id)"></fa-icon>
+            </button> 
+            <button class="remove-border" style="color:darkcyan;">
+                <fa-icon [icon]="delete" class="fa-lg" (click)="deleteUser(element.Id)"></fa-icon>
+            </button>
+        </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5,10,20]"></mat-paginator>
+
+  <div class="container" style="display: none;">
+    <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{editModal? 'Edit' : 'Add'}} User</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field>
+            <input matInput placeholder="FirstName" formControlName="firstName" type="text"/>
+            <mat-error *ngIf="addUserForm.controls['firstName'].dirty && addUserForm.hasError('required','firstName')" class="text-danger">*First Name is required*</mat-error>
+            <mat-error *ngIf="addUserForm.controls['firstName'].hasError('minlength')" class="alert alert-danger">Min 4 char is required</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="LastName" formControlName="lastName" type="text"/>
+            <mat-error *ngIf="addUserForm.controls['lastName'].dirty && addUserForm.hasError('required','lastName')" class="text-danger">*Last Name is required*</mat-error>
+            <mat-error *ngIf="addUserForm.controls['lastName'].hasError('maxlength')" class="alert alert-danger">Max 12 char only</mat-error>
+          </mat-form-field>
+  
+          <div>
+            <mat-form-field>
+              <input matInput placeholder="Email" formControlName="email" type="email"/>
+              <mat-error *ngIf="addUserForm.controls['email'].dirty && addUserForm.hasError('required','email')" class="text-danger">*Email  is required*</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="PhoneNumber" formControlName="phoneNumber" type="number"/>
+              <mat-error *ngIf="addUserForm.controls['phoneNumber'].dirty && addUserForm.hasError('required','phoneNumber')" class="text-danger">*PhoneNumber is required*</mat-error>
+              <mat-error *ngIf="addUserForm.controls['phoneNumber'].hasError('pattern')" class="alert alert-danger">input is not more than 10 number</mat-error>
+            </mat-form-field>
+          </div>
+  
+          <div  *ngIf="showPassDiv">
+            <mat-form-field>
+              <input matInput placeholder="Password" id="password" formControlName="password"/>
+              <mat-error *ngIf="addUserForm.controls['password'].dirty && addUserForm.hasError('required','password')" class="text-danger">*Password is required*</mat-error>
+              <mat-error *ngIf="addUserForm.controls['password'].hasError('pattern')" class="alert alert-danger">Pattern not matched</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Confirm Password" id="confirm_password" formControlName="confirmPassword"/>
+              <mat-error *ngIf="addUserForm.controls['confirmPassword'].dirty && addUserForm.hasError('required','confirmPassword')" class="text-danger">*Confirm Password is required*</mat-error>
+               <!-- <mat-error *ngIf="addUserForm.controls.['confirmPassword'].errors['matching']"></mat-error>  -->
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field>
+              <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="DOB" formControlName="dateofBirth"/>
+              <mat-datepicker-toggle matSuffix matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-select placeholder="Status" formControlName="enabled">
+                <mat-option [value]="true">Active</mat-option>
+                <mat-option [value]="false">InActive</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <button mat-raised-button color="primary" type="submit" style="margin-right: 20px;">Save</button>
+            <button mat-raised-button color="primary" type="reset" (click)="resetForm()">Cancel</button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </form>
+  </div>
+  <ngx-loading [show]="loading"></ngx-loading>
+
+
+ 
+ 
+  

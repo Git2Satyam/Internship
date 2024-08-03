@@ -1,0 +1,46 @@
+.demo-table {
+    width: 100%;
+    position: relative;
+    /* z-index: 1; */
+  }
+
+  button{
+    padding: 5px;
+    border: none;
+    background: none;
+  }
+  
+  .mat-header-cell{
+    font-weight: bold;
+    font-size: medium;
+  }
+
+  .mat-cell{
+    text-align: left;
+  }
+
+  /* .demo-button-container{
+   position: static;
+   text-align: right;
+  } */
+
+  .mat_button{
+    margin: 10px;
+    float: right;
+  }
+
+  mat-datepicker-toggle{
+    margin-top: -40px;
+    float: right;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    transform: translate(-0%, -100%);
+    width: 600px;
+    z-index: 2!important;
+  }
+
+  .container mat-form-field + mat-form-field {
+    margin-left: 8px;
+  }

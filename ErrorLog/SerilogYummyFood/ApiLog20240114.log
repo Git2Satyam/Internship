@@ -1,0 +1,13 @@
+[2024-01-14 07:30:32.185 -05:00 [{Leve:u3]} An exception occurred while iterating over the results of a query for context type '"YummyFood.Core.Entities.YummyFoodContext"'."\r\n""System.MissingMethodException: Attempted to access a missing method.\r\n   at YummyFood.Models.ProductModel.set_ImageUrl(String value)\r\n   at lambda_method13(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()"
+System.MissingMethodException: Attempted to access a missing method.
+   at YummyFood.Models.ProductModel.set_ImageUrl(String value)
+   at lambda_method13(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+][2024-01-14 07:30:32.299 -05:00 [{Leve:u3]} Attempted to access a missing method.
+][2024-01-14 07:30:48.580 -05:00 [{Leve:u3]} An exception occurred while iterating over the results of a query for context type '"YummyFood.Core.Entities.YummyFoodContext"'."\r\n""System.MissingMethodException: Attempted to access a missing method.\r\n   at YummyFood.Models.ProductModel.set_ImageUrl(String value)\r\n   at lambda_method13(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()"
+System.MissingMethodException: Attempted to access a missing method.
+   at YummyFood.Models.ProductModel.set_ImageUrl(String value)
+   at lambda_method13(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+][2024-01-14 07:30:48.633 -05:00 [{Leve:u3]} Attempted to access a missing method.
+]
