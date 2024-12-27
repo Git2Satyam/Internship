@@ -1,0 +1,35 @@
+[2024-12-22 09:27:46.499 -05:00  INF]  Now listening on: https://localhost:7106
+[2024-12-22 09:27:46.524 -05:00  INF]  Now listening on: http://localhost:5081
+[2024-12-22 09:27:46.527 -05:00  INF]  Application started. Press Ctrl+C to shut down.
+[2024-12-22 09:27:46.527 -05:00  INF]  Hosting environment: Development
+[2024-12-22 09:27:46.527 -05:00  INF]  Content root path: D:\Internship\StyleSphere\StyleSphereAPI\StyleSphereWebAPI\
+[2024-12-22 09:27:48.110 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/swagger - -
+[2024-12-22 09:27:48.456 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/swagger - - - 301 0 - 349.9460ms
+[2024-12-22 09:27:48.458 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+[2024-12-22 09:27:48.575 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 116.5988ms
+[2024-12-22 09:27:48.616 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui-standalone-preset.js - -
+[2024-12-22 09:27:48.616 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+[2024-12-22 09:27:48.616 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+[2024-12-22 09:27:48.617 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui.css - -
+[2024-12-22 09:27:48.617 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui-bundle.js - -
+[2024-12-22 09:27:48.622 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 6.3212ms
+[2024-12-22 09:27:48.660 -05:00  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2024-12-22 09:27:48.660 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui.css - - - 200 144929 text/css 43.2009ms
+[2024-12-22 09:27:48.708 -05:00  INF]  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2024-12-22 09:27:48.716 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 100.4322ms
+[2024-12-22 09:27:48.741 -05:00  INF]  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2024-12-22 09:27:48.741 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 123.9573ms
+[2024-12-22 09:27:48.839 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 222.8443ms
+[2024-12-22 09:27:48.925 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+[2024-12-22 09:27:48.942 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/swagger/favicon-32x32.png - -
+[2024-12-22 09:27:48.942 -05:00  INF]  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[2024-12-22 09:27:48.942 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/swagger/favicon-32x32.png - - - 200 628 image/png 0.4684ms
+[2024-12-22 09:27:49.062 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 136.7070ms
+[2024-12-22 09:28:01.737 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/Products/GetAllProducts - -
+[2024-12-22 09:28:01.767 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.ProductsController.GetAllProducts (StyleSphereWebAPI)'
+[2024-12-22 09:28:01.798 -05:00  INF]  Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllProducts() on controller StyleSphereWebAPI.Controllers.ProductsController (StyleSphereWebAPI).
+[2024-12-22 09:28:01.907 -05:00  ERR]  The method or operation is not implemented.
+[2024-12-22 09:28:01.916 -05:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2024-12-22 09:28:01.936 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.ProductsController.GetAllProducts (StyleSphereWebAPI) in 124.7399ms
+[2024-12-22 09:28:01.940 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.ProductsController.GetAllProducts (StyleSphereWebAPI)'
+[2024-12-22 09:28:01.941 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/Products/GetAllProducts - - - 400 - application/problem+json;+charset=utf-8 204.0307ms
