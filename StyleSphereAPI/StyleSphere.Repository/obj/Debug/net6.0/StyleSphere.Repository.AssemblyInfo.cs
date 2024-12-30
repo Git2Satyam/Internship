@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StyleSphere.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e61e144eb0fcb53eaa9722282bc57e7378c889c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b34b13140831a3ee1373ad1aa6511b4d29b4e3f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("StyleSphere.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StyleSphere.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
