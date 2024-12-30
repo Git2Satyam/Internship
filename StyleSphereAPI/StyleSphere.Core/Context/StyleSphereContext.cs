@@ -17,11 +17,13 @@ namespace StyleSphere.Core.Context
 
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<NavItem> NavItems { get; set; }
 
         public void OnModelCreating(ModelBuilder builder)
         {
            builder.ApplyConfiguration(new ProductMapConfig());
            builder.ApplyConfiguration(new ProductImageMapConfig());
+            builder.ApplyConfiguration(new NavItemsMapConfig());
         }
     }
 }

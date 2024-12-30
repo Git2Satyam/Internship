@@ -6,7 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./us-headerpage.component.css']
 })
 export class UsHeaderpageComponent implements OnInit {
- isSideNavVisible: boolean = false;
+  isSideNavhide: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
@@ -14,6 +14,7 @@ export class UsHeaderpageComponent implements OnInit {
   }
 
   sidenavToggle(){
-    this.isSideNavVisible = !this.isSideNavVisible;
+    this.isSideNavhide = !this.isSideNavhide;
+    console.log(this.isSideNavhide);
   }
 }

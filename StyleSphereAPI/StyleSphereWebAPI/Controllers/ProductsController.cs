@@ -12,6 +12,8 @@ namespace StyleSphereWebAPI.Controllers
         {
             _logger = logger;
         }
+
+
         [HttpGet]
         public IActionResult GetAllProducts()
         {

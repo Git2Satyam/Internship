@@ -10,3 +10,4 @@ D:\Internship\StyleSphere\StyleSphereAPI\StyleSphere.Core\obj\Debug\net6.0\Style
 D:\Internship\StyleSphere\StyleSphereAPI\StyleSphere.Core\obj\Debug\net6.0\refint\StyleSphere.Core.dll
 D:\Internship\StyleSphere\StyleSphereAPI\StyleSphere.Core\obj\Debug\net6.0\StyleSphere.Core.pdb
 D:\Internship\StyleSphere\StyleSphereAPI\StyleSphere.Core\obj\Debug\net6.0\ref\StyleSphere.Core.dll
+D:\Internship\StyleSphere\StyleSphereAPI\StyleSphere.Core\obj\Debug\net6.0\StyleSphere.Core.sourcelink.json

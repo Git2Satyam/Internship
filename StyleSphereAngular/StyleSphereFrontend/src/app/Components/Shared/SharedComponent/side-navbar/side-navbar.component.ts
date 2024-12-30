@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/Services/api.service';
 
 @Component({
   selector: 'app-side-navbar',
@@ -6,27 +7,22 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./side-navbar.component.css']
 })
 export class SideNavbarComponent implements OnInit {
-  navlist = [
-    {
-      number: '1',
-      name: 'home',
-      icon: 'fa-solid fa-house'
-    },
-    {
-      number: '2',
-      name: 'Admin',
-      icon: 'fa-solid fa-house'
-    }, 
-    {
-      number: '1',
-      name: 'Settings',
-      icon: 'fa-solid fa-house'
-    }
-  ]
-  constructor() { }
+  navlist: any[] = [];
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    console.log(this.navlist);
+    this.getNavItems();
+  }
+
+  getNavItems(){
+    this.apiService.getNavItems().subscribe(response => {
+      //console.log(response);
+      if(response.Success){
+        this.navlist = response.Result;
+        console.log(this.navlist);
+      }
+
+    })
   }
 
 }

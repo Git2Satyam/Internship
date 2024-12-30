@@ -22,7 +22,7 @@
                 <li><a class="dropdown-item" href="#">Login</a></li>
                 <li><a class="dropdown-item" href="#">Signup</a></li>
             </ul>
-            <span>Name</span>
+            <span>Satyam</span>
         </div>
        
       <button class="modify-btn me-4">
@@ -38,11 +38,16 @@
       <h4>XYZ</h4>
     </div>
 </div>
-<div class="row mt-2">
-   <app-side-navbar [ngClass]="{'side-navbar-hide': isSideNavVisible}"></app-side-navbar>
-    <!-- <div class="col-md-19 col-lg-1">
-        <img src="/assets/Header/HeaderImg_1.jpg" alt="no image" class="rounded-top imagecss" />
-    </div> -->
+<div class="mt-2">
+   <app-side-navbar [ngClass]="{'side-navbar-hide': isSideNavhide}"></app-side-navbar>
+   <div [ngClass]="isSideNavhide ? 'display-content-fullwidth' : 'display-content'">
+     <div class="col-md-19 col-lg-1">
+        <img src="/assets/Header/HeaderImg_1.jpg" alt="no image" class="rounded-top" />
+    </div>
+      <router-outlet></router-outlet>
+   </div>
+   <app-footer class="footer"></app-footer>
+   
 </div>
   
 

@@ -90,3 +90,4 @@ D:\Internship\StyleSphere\StyleSphereAPI\StyleSphereWebAPI\obj\Debug\net6.0\refi
 D:\Internship\StyleSphere\StyleSphereAPI\StyleSphereWebAPI\obj\Debug\net6.0\StyleSphereWebAPI.pdb
 D:\Internship\StyleSphere\StyleSphereAPI\StyleSphereWebAPI\obj\Debug\net6.0\StyleSphereWebAPI.genruntimeconfig.cache
 D:\Internship\StyleSphere\StyleSphereAPI\StyleSphereWebAPI\obj\Debug\net6.0\ref\StyleSphereWebAPI.dll
+D:\Internship\StyleSphere\StyleSphereAPI\StyleSphereWebAPI\obj\Debug\net6.0\StyleSphereWebAPI.sourcelink.json
