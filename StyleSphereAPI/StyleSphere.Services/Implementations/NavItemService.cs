@@ -17,6 +17,19 @@ namespace StyleSphere.Services.Implementations
         {
             _repo = repo;  
         }
+
+        public IEnumerable<NavItemsModel> GetAdminNavItem()
+        {
+            try
+            {
+                return _repo.GetAdminNavItem();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public IEnumerable<NavItemsModel> GetNavItems()
         {
             try

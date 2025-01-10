@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using StyleSphere.Models;
+using StyleSphere.Services.Interface;
 
 namespace StyleSphereWebAPI.Controllers
 {
@@ -8,18 +11,33 @@ namespace StyleSphereWebAPI.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly ILogger<ProductsController> _logger;
-        public ProductsController(ILogger<ProductsController> logger)
+        private readonly IProductService _productService;
+        public ProductsController(ILogger<ProductsController> logger, IProductService productService)
         {
             _logger = logger;
+            _productService = productService;
         }
 
-
+        [Authorize]
         [HttpGet]
         public IActionResult GetAllProducts()
         {
+            var response = new ResponseModel();
             try
             {
-                   throw new NotImplementedException();
+                 var result = _productService.GetAllProducts();
+                if(result.Count() > 0)
+                {
+                    response.Success = true;
+                    response.Status = "Ok";
+                    response.Result = result;
+                }
+                else 
+                { 
+                    response.Success = false;
+                    response.Status = "Failed";
+                }
+                return Ok(response);
             }
             catch(Exception ex)
             {

@@ -1,0 +1,45 @@
+[2025-01-09 23:40:18.072 -05:00  INF]  User profile is available. Using 'C:\Users\inbox\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-01-09 23:40:18.759 -05:00  INF]  Now listening on: https://localhost:7106
+[2025-01-09 23:40:18.759 -05:00  INF]  Now listening on: http://localhost:5081
+[2025-01-09 23:40:18.762 -05:00  INF]  Application started. Press Ctrl+C to shut down.
+[2025-01-09 23:40:18.762 -05:00  INF]  Hosting environment: Development
+[2025-01-09 23:40:18.762 -05:00  INF]  Content root path: D:\Internship\StyleSphere\StyleSphereAPI\StyleSphereWebAPI\
+[2025-01-09 23:40:20.875 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+[2025-01-09 23:40:21.345 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 474.2882ms
+[2025-01-09 23:40:21.387 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+[2025-01-09 23:40:21.387 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+[2025-01-09 23:40:21.397 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 9.6271ms
+[2025-01-09 23:40:21.552 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 165.2109ms
+[2025-01-09 23:40:21.662 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+[2025-01-09 23:40:21.818 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 156.6498ms
+[2025-01-09 23:41:26.601 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/NavItems/GetAllNavItems - -
+[2025-01-09 23:41:26.675 -05:00  INF]  CORS policy execution successful.
+[2025-01-09 23:41:28.210 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI)'
+[2025-01-09 23:41:28.241 -05:00  INF]  Route matched with {action = "GetAllNavItems", controller = "NavItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllNavItems() on controller StyleSphereWebAPI.Controllers.NavItemsController (StyleSphereWebAPI).
+[2025-01-09 23:41:32.114 -05:00  WRN]  No store type was specified for the decimal property 'SortOrder' on entity type 'AdminNavItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2025-01-09 23:41:32.114 -05:00  WRN]  No store type was specified for the decimal property 'SortOrder' on entity type 'NavItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2025-01-09 23:41:32.114 -05:00  WRN]  No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2025-01-09 23:41:32.717 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-09 23:41:36.605 -05:00  INF]  Executed DbCommand (149ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Name], [n].[Url], [n].[icon] AS [Icon], [n].[SortOrder]
+FROM [NavItems] AS [n]
+WHERE [n].[Enabled] = CAST(1 AS bit)
+ORDER BY [n].[SortOrder]
+[2025-01-09 23:41:36.752 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-09 23:41:36.821 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI) in 8559.9159ms
+[2025-01-09 23:41:36.823 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI)'
+[2025-01-09 23:41:36.857 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/NavItems/GetAllNavItems - - - 200 - application/json;+charset=utf-8 10256.8246ms
+[2025-01-09 23:56:10.441 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/NavItems/GetAllNavItems - -
+[2025-01-09 23:56:10.460 -05:00  INF]  CORS policy execution successful.
+[2025-01-09 23:56:10.470 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI)'
+[2025-01-09 23:56:10.480 -05:00  INF]  Route matched with {action = "GetAllNavItems", controller = "NavItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllNavItems() on controller StyleSphereWebAPI.Controllers.NavItemsController (StyleSphereWebAPI).
+[2025-01-09 23:56:10.497 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-09 23:56:10.555 -05:00  INF]  Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Name], [n].[Url], [n].[icon] AS [Icon], [n].[SortOrder]
+FROM [NavItems] AS [n]
+WHERE [n].[Enabled] = CAST(1 AS bit)
+ORDER BY [n].[SortOrder]
+[2025-01-09 23:56:10.555 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-09 23:56:10.556 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI) in 73.9177ms
+[2025-01-09 23:56:10.556 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI)'
+[2025-01-09 23:56:10.556 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/NavItems/GetAllNavItems - - - 200 - application/json;+charset=utf-8 115.4286ms

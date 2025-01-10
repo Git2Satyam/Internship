@@ -22,7 +22,16 @@ namespace StyleSphere.Repository.Implementations
         {
             try
             {
-               throw new NotImplementedException();
+               var list = _context.Products.Where(p => p.Enabled == true && p.Deleted == false).Select(x => new ProductModel
+               {
+                   ProductName = x.ProductName,
+                   ProductDescription = x.ProductDescription,
+                   UnitPrice = x.UnitPrice,
+                   Quantity = x.Quantity,
+                   DiscountPercentage = x.DiscountPercentage,
+                   Title = x.Title,
+               }).ToList();
+                return list;
             }
             catch(Exception ex)
             {

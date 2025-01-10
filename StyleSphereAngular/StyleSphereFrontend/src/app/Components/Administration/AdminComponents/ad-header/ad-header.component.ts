@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/Services/api.service';
 
 @Component({
   selector: 'app-ad-header',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdHeaderComponent implements OnInit {
 
-  constructor() { }
+  isExpanded = true;
+  showSubmenu: boolean = false;
+  isShowing = false;
+  showSubSubMenu: boolean = false;
+  sidenavOpen: boolean = true;
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.isAdmin = true;
   }
 
+  mouseenter() {
+    if (!this.isExpanded) {
+      this.isShowing = true;
+    }
+  }
+
+  mouseleave() {
+    if (!this.isExpanded) {
+      this.isShowing = false;
+    }
+  }
+
+  sidenavToggle(){
+    this.sidenavOpen = !this.sidenavOpen;
+  }
 }

@@ -12,6 +12,10 @@ namespace StyleSphere.Services.Implementations
     public class ProductService : IProductService
     {
         private readonly IProductRepo _productRepo;
+        public ProductService(IProductRepo productRepo)
+        {
+            _productRepo = productRepo;
+        }
         public List<ProductModel> GetAllProducts()
         {
             try

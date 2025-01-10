@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1Pzbpl5ekco=",
+  "dgSpecHash": "FA15B/QS/Z8=",
   "success": true,
   "projectFilePath": "D:\\Internship\\StyleSphere\\StyleSphereAPI\\StyleSphere.Services\\StyleSphere.Services.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\inbox\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.36\\microsoft.aspnetcore.authentication.jwtbearer.6.0.36.nupkg.sha512",
     "C:\\Users\\inbox\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\inbox\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.7\\microsoft.data.sqlclient.2.1.7.nupkg.sha512",
     "C:\\Users\\inbox\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

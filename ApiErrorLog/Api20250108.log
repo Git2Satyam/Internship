@@ -1,0 +1,96 @@
+[2025-01-08 00:11:28.213 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/User/VerifyUser?username=Ma@j.com&password=Max123 - -
+[2025-01-08 00:11:28.258 -05:00  INF]  CORS policy execution successful.
+[2025-01-08 00:11:28.259 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.UserController.VerifyUser (StyleSphereWebAPI)'
+[2025-01-08 00:11:28.341 -05:00  INF]  Route matched with {action = "VerifyUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult VerifyUser(System.String, System.String) on controller StyleSphereWebAPI.Controllers.UserController (StyleSphereWebAPI).
+[2025-01-08 00:11:44.836 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-08 00:11:45.103 -05:00  INF]  Executed DbCommand (112ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedDate], [u].[Deleted], [u].[Email], [u].[Enabled], [u].[FirstName], [u].[LastName], [u].[ModifiedBy], [u].[ModifiedDate], [u].[Password], [u].[PasswordExpiryDate]
+FROM [Users] AS [u]
+WHERE ((([u].[Enabled] = CAST(1 AS bit)) AND ([u].[Deleted] = CAST(0 AS bit))) AND ([u].[Email] = @__username_0)) AND ([u].[Password] = @__password_1)
+[2025-01-08 00:12:07.457 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-08 00:12:09.585 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.UserController.VerifyUser (StyleSphereWebAPI) in 41243.3954ms
+[2025-01-08 00:12:09.585 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.UserController.VerifyUser (StyleSphereWebAPI)'
+[2025-01-08 00:12:09.585 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/User/VerifyUser?username=Ma@j.com&password=Max123 - - - 200 - application/json;+charset=utf-8 41372.3662ms
+[2025-01-08 00:12:09.657 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/NavItems/GetAdminNavItems - -
+[2025-01-08 00:12:09.658 -05:00  INF]  CORS policy execution successful.
+[2025-01-08 00:12:09.658 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI)'
+[2025-01-08 00:12:09.658 -05:00  INF]  Route matched with {action = "GetAdminNavItems", controller = "NavItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAdminNavItems() on controller StyleSphereWebAPI.Controllers.NavItemsController (StyleSphereWebAPI).
+[2025-01-08 00:12:09.660 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-08 00:12:09.662 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-08 00:12:09.669 -05:00  INF]  Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name], [a].[Url], [a].[Icon], [a].[SortOrder]
+FROM [AdminNavItems] AS [a]
+WHERE [a].[Enabled] = CAST(1 AS bit)
+ORDER BY [a].[SortOrder]
+[2025-01-08 00:12:09.669 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI) in 11.2047ms
+[2025-01-08 00:12:09.670 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI)'
+[2025-01-08 00:12:09.670 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/NavItems/GetAdminNavItems - - - 200 - application/json;+charset=utf-8 12.4489ms
+[2025-01-08 00:20:51.530 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/NavItems/GetAdminNavItems - -
+[2025-01-08 00:20:51.535 -05:00  INF]  CORS policy execution successful.
+[2025-01-08 00:20:51.539 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI)'
+[2025-01-08 00:20:51.539 -05:00  INF]  Route matched with {action = "GetAdminNavItems", controller = "NavItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAdminNavItems() on controller StyleSphereWebAPI.Controllers.NavItemsController (StyleSphereWebAPI).
+[2025-01-08 00:20:51.623 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-08 00:20:51.631 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-08 00:20:51.697 -05:00  INF]  Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name], [a].[Url], [a].[Icon], [a].[SortOrder]
+FROM [AdminNavItems] AS [a]
+WHERE [a].[Enabled] = CAST(1 AS bit)
+ORDER BY [a].[SortOrder]
+[2025-01-08 00:20:51.698 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI) in 157.4041ms
+[2025-01-08 00:20:51.698 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI)'
+[2025-01-08 00:20:51.698 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/NavItems/GetAdminNavItems - - - 200 - application/json;+charset=utf-8 167.9453ms
+[2025-01-08 00:20:57.050 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/NavItems/GetAllNavItems - -
+[2025-01-08 00:20:57.051 -05:00  INF]  CORS policy execution successful.
+[2025-01-08 00:20:57.051 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI)'
+[2025-01-08 00:20:57.051 -05:00  INF]  Route matched with {action = "GetAllNavItems", controller = "NavItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllNavItems() on controller StyleSphereWebAPI.Controllers.NavItemsController (StyleSphereWebAPI).
+[2025-01-08 00:20:57.053 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-08 00:20:57.065 -05:00  INF]  Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Name], [n].[Url], [n].[icon] AS [Icon], [n].[SortOrder]
+FROM [NavItems] AS [n]
+WHERE [n].[Enabled] = CAST(1 AS bit)
+ORDER BY [n].[SortOrder]
+[2025-01-08 00:20:57.065 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-08 00:20:57.066 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI) in 14.7187ms
+[2025-01-08 00:20:57.066 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI)'
+[2025-01-08 00:20:57.067 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/NavItems/GetAllNavItems - - - 200 - application/json;+charset=utf-8 16.3404ms
+[2025-01-08 00:21:37.409 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/User/VerifyUser?username=Ma@j.com&password=Max123 - -
+[2025-01-08 00:21:37.417 -05:00  INF]  CORS policy execution successful.
+[2025-01-08 00:21:37.418 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.UserController.VerifyUser (StyleSphereWebAPI)'
+[2025-01-08 00:21:37.418 -05:00  INF]  Route matched with {action = "VerifyUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult VerifyUser(System.String, System.String) on controller StyleSphereWebAPI.Controllers.UserController (StyleSphereWebAPI).
+[2025-01-08 00:21:37.441 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-08 00:21:37.458 -05:00  INF]  Executed DbCommand (10ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedDate], [u].[Deleted], [u].[Email], [u].[Enabled], [u].[FirstName], [u].[LastName], [u].[ModifiedBy], [u].[ModifiedDate], [u].[Password], [u].[PasswordExpiryDate]
+FROM [Users] AS [u]
+WHERE ((([u].[Enabled] = CAST(1 AS bit)) AND ([u].[Deleted] = CAST(0 AS bit))) AND ([u].[Email] = @__username_0)) AND ([u].[Password] = @__password_1)
+[2025-01-08 00:21:37.465 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-08 00:21:37.465 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.UserController.VerifyUser (StyleSphereWebAPI) in 47.0829ms
+[2025-01-08 00:21:37.466 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.UserController.VerifyUser (StyleSphereWebAPI)'
+[2025-01-08 00:21:37.466 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/User/VerifyUser?username=Ma@j.com&password=Max123 - - - 200 - application/json;+charset=utf-8 66.4348ms
+[2025-01-08 00:21:37.528 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/NavItems/GetAdminNavItems - -
+[2025-01-08 00:21:37.528 -05:00  INF]  CORS policy execution successful.
+[2025-01-08 00:21:37.529 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI)'
+[2025-01-08 00:21:37.530 -05:00  INF]  Route matched with {action = "GetAdminNavItems", controller = "NavItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAdminNavItems() on controller StyleSphereWebAPI.Controllers.NavItemsController (StyleSphereWebAPI).
+[2025-01-08 00:21:37.534 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-08 00:21:37.535 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-08 00:21:37.550 -05:00  INF]  Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name], [a].[Url], [a].[Icon], [a].[SortOrder]
+FROM [AdminNavItems] AS [a]
+WHERE [a].[Enabled] = CAST(1 AS bit)
+ORDER BY [a].[SortOrder]
+[2025-01-08 00:21:37.551 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI) in 21.5025ms
+[2025-01-08 00:21:37.551 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI)'
+[2025-01-08 00:21:37.552 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/NavItems/GetAdminNavItems - - - 200 - application/json;+charset=utf-8 24.3365ms
+[2025-01-08 00:29:53.709 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/NavItems/GetAdminNavItems - -
+[2025-01-08 00:29:53.709 -05:00  INF]  CORS policy execution successful.
+[2025-01-08 00:29:53.709 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI)'
+[2025-01-08 00:29:53.710 -05:00  INF]  Route matched with {action = "GetAdminNavItems", controller = "NavItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAdminNavItems() on controller StyleSphereWebAPI.Controllers.NavItemsController (StyleSphereWebAPI).
+[2025-01-08 00:29:53.740 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-08 00:29:53.745 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-08 00:29:53.814 -05:00  INF]  Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name], [a].[Url], [a].[Icon], [a].[SortOrder]
+FROM [AdminNavItems] AS [a]
+WHERE [a].[Enabled] = CAST(1 AS bit)
+ORDER BY [a].[SortOrder]
+[2025-01-08 00:29:53.816 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI) in 106.287ms
+[2025-01-08 00:29:53.816 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI)'
+[2025-01-08 00:29:53.822 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/NavItems/GetAdminNavItems - - - 200 - application/json;+charset=utf-8 112.8940ms

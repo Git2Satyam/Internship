@@ -10,5 +10,7 @@ namespace StyleSphere.Repository.Interface
     public interface INavItemsRepo
     {
         IEnumerable<NavItemsModel> GetNavItems();
+
+        IEnumerable<NavItemsModel> GetAdminNavItem();
     }
 }

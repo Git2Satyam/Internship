@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
+
 .modify-btn{
     background: none;
     border: none;
@@ -8,4 +9,12 @@
 
 body{
     overflow-x: hidden;
+}
+
+.display-content-admin{
+    /* overflow-y: scroll; */
+    position: absolute;
+    top: 73px;
+    left: 260px;
+    width: 100%;
 }

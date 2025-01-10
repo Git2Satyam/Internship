@@ -10,5 +10,7 @@ namespace StyleSphere.Services.Interface
     public interface INavtItemsService
     {
         IEnumerable<NavItemsModel> GetNavItems();
+
+        IEnumerable<NavItemsModel> GetAdminNavItem();
     }
 }

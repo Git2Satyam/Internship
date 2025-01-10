@@ -2,10 +2,6 @@ import { NgModule } from "@angular/core";
 import {RouterModule, Routes } from "@angular/router";
 
 const route: Routes = [
-    // {
-    //     path: '',
-    //     component: UsHeaderpageComponent
-    // }
 ]
 
 @NgModule({

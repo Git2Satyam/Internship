@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StyleSphere.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e61e144eb0fcb53eaa9722282bc57e7378c889c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfc7fc1012df5dd76eaa05faeed90963ceb1d5f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("StyleSphere.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StyleSphere.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

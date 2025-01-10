@@ -16,6 +16,28 @@ namespace StyleSphere.Repository.Implementations
         {
             _context = context; 
         }
+
+        public IEnumerable<NavItemsModel> GetAdminNavItem()
+        {
+            try
+            {
+                var navItems = _context.AdminNavItems.Where(c => c.Enabled == true).Select(n => new NavItemsModel
+                {
+                    Id = n.Id,
+                    Name = n.Name,
+                    Url = n.Url,
+                    Icon = n.Icon,
+                    SortOrder = n.SortOrder,
+                }).OrderBy(c => c.SortOrder);
+
+                return navItems;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public IEnumerable<NavItemsModel> GetNavItems()
         {
             try

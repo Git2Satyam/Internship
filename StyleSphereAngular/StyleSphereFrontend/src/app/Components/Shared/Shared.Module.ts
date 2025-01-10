@@ -1,16 +1,14 @@
 import { NgModule } from "@angular/core";
-import { UsHeaderpageComponent } from "./SharedComponent/us-headerpage/us-headerpage.component";
 import { RouterModule } from "@angular/router";
 import { FooterComponent } from "./SharedComponent/footer/footer.component";
-import { MaterialModule } from "src/app/material.module";
-import { SideNavbarComponent } from "./SharedComponent/side-navbar/side-navbar.component";
 import { CommonModule } from "@angular/common";
+import { SideNavbarComponent } from "./SharedComponent/side-navbar/side-navbar.component";
 
 
 @NgModule({
-    declarations: [UsHeaderpageComponent, FooterComponent, SideNavbarComponent],
+    declarations: [FooterComponent, SideNavbarComponent],
     imports: [RouterModule, CommonModule],
-    exports: [UsHeaderpageComponent, FooterComponent]
+    exports: [FooterComponent, SideNavbarComponent]
 })
 
 export class SharedModule { }

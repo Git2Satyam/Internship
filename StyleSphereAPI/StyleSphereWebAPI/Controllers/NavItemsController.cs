@@ -19,7 +19,6 @@ namespace StyleSphereWebAPI.Controllers
             _service = service;
         }
 
-
         [HttpGet]
         public IActionResult GetAllNavItems()
         {
@@ -42,6 +41,36 @@ namespace StyleSphereWebAPI.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message, ex);
+                return BadRequest();
+            }
+        }
+
+
+
+        /*********************************************************************AdminNavItems********************************************************************************/
+
+        [HttpGet]
+        public IActionResult GetAdminNavItems()
+        {
+            var response = new ResponseModel();
+            try
+            {
+                var result = _service.GetAdminNavItem();
+                if (result != null)
+                {
+                    response.Success = true;
+                    response.Status = "Ok";
+                    response.Result = result;
+                }
+                else
+                {
+                    response.Success = false;
+                }
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, ex);  
                 return BadRequest();
             }
         }
