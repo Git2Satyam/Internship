@@ -3,5 +3,20 @@ table, .mat-table {
     display: table;
     margin-right: 10px;
   }
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+
+h4 {
+    margin: 0;
+    line-height: 2rem; /* Ensure proper alignment */
+}
+
+
   
     

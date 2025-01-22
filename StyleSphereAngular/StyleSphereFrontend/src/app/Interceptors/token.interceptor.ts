@@ -34,7 +34,7 @@ export class TokenInterceptor implements HttpInterceptor {
         if (err instanceof HttpErrorResponse) {
           if (err.status == 401) {
             this.toastr.warning('Your token is expire.', 'Warning');
-            this.router.navigate(['/']);
+            this.router.navigate(['/admin/ad-login-signup']);
           }
         }
         return throwError(() => new Error('Something went wrong.'));

@@ -45,5 +45,27 @@ namespace StyleSphereWebAPI.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpPost]
+        public IActionResult InsertOrUpdateProduct()
+        {
+            if(ModelState.IsValid)
+            {
+                var response = new ResponseModel();
+                try
+                {
+                    throw new NotImplementedException();
+                }
+                catch(Exception ex)
+                {
+                    _logger.LogError(ex.Message, ex);
+                    return BadRequest();
+                }
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
     }
 }

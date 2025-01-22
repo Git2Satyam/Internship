@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/Services/api.service';
+import { AuthenticationService } from 'src/app/Services/authentication.service';
 
 @Component({
   selector: 'app-ad-header',
@@ -13,9 +15,13 @@ export class AdHeaderComponent implements OnInit {
   isShowing = false;
   showSubSubMenu: boolean = false;
   sidenavOpen: boolean = true;
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private auth: AuthenticationService, private router: Router) { }
 
   ngOnInit(): void {
+    let userlogged = this.auth.isLogged();
+    if(!userlogged){
+       this.router.navigate(['/admin/ad-login-signup'])
+    }
     this.apiService.isAdmin = true;
   }
 

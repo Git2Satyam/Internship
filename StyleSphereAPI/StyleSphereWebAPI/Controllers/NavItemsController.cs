@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR.Protocol;
 using StyleSphere.Models;
@@ -49,6 +50,8 @@ namespace StyleSphereWebAPI.Controllers
 
         /*********************************************************************AdminNavItems********************************************************************************/
 
+
+        [Authorize]
         [HttpGet]
         public IActionResult GetAdminNavItems()
         {

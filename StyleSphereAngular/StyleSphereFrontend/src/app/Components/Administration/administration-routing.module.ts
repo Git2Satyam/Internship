@@ -7,11 +7,11 @@ import { AdLoginSignupComponent } from "./AdminComponents/ad-login-signup/ad-log
 
 const route: Routes = [
      {
-          path: '',
+          path: 'ad-login-signup',
           component: AdLoginSignupComponent
      },
      {
-          path: 'ad-header',
+          path: '',
           component: AdHeaderComponent
      },
      {

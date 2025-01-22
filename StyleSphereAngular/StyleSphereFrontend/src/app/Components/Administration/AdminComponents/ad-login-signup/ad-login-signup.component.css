@@ -4,3 +4,21 @@
     left: 180px;
     height: 350px;
 }
+
+
+
+.input-container {
+    position: relative;
+  }
+  
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Adjust this value for spacing */
+    transform: translateY(-50%);
+    color: #888; /* Icon color */
+  }
+  
+  .form-control {
+    padding-left: 35px; /* Add padding to make space for the icon */
+  }

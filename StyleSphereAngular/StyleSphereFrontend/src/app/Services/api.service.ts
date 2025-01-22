@@ -36,6 +36,10 @@ export class ApiService {
     });
   }
 
+  insertOrUpdateUser(obj: any): Observable<any>{
+    return this.client.post<any>(`${this.url}User/InsertOrUpdateUser`, obj);
+  }
+
   /*********************************************ProductControllerApi************************************************************* */
   getProdcuts(): Observable<any> {
     const token = this.authService.getToken();
@@ -43,5 +47,9 @@ export class ApiService {
     return this.client.get<any>(`${this.url}Products/GetAllProducts`, {
       headers: headerObj,
     });
+  }
+
+  insertOrUpdateProduct(obj: any): Observable<any>{
+    return this.client.post<any>(`${this.url}Products/InsertOrUpdateProduct`, obj);
   }
 }

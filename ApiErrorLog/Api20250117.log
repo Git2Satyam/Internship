@@ -1,0 +1,220 @@
+[2025-01-17 00:02:23.094 -05:00  INF]  Request starting HTTP/2 OPTIONS https://localhost:7106/api/User/InsertOrUpdateUser - -
+[2025-01-17 00:02:23.142 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:02:23.143 -05:00  INF]  Request finished HTTP/2 OPTIONS https://localhost:7106/api/User/InsertOrUpdateUser - - - 204 - - 49.5642ms
+[2025-01-17 00:02:23.156 -05:00  INF]  Request starting HTTP/2 POST https://localhost:7106/api/User/InsertOrUpdateUser application/json 113
+[2025-01-17 00:02:23.156 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:02:23.159 -05:00  INF]  Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-01-2025 04:22:41', Current time (UTC): '17-01-2025 05:02:23'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2025-01-17 00:02:23.161 -05:00  INF]  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-01-2025 04:22:41', Current time (UTC): '17-01-2025 05:02:23'.
+[2025-01-17 00:02:23.161 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.UserController.InsertOrUpdateUser (StyleSphereWebAPI)'
+[2025-01-17 00:02:23.162 -05:00  INF]  Route matched with {action = "InsertOrUpdateUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InsertOrUpdateUser(StyleSphere.Models.UserModel) on controller StyleSphereWebAPI.Controllers.UserController (StyleSphereWebAPI).
+[2025-01-17 00:02:30.319 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-17 00:02:30.422 -05:00  INF]  Executed DbCommand (28ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedDate], [u].[Deleted], [u].[Email], [u].[Enabled], [u].[FirstName], [u].[LastName], [u].[ModifiedBy], [u].[ModifiedDate], [u].[Password], [u].[PasswordExpiryDate]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__user_Id_0
+[2025-01-17 00:02:30.435 -05:00  INF]  Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedDate], [Deleted], [Email], [Enabled], [FirstName], [LastName], [ModifiedBy], [ModifiedDate], [Password], [PasswordExpiryDate])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+[2025-01-17 00:02:30.443 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-17 00:02:30.445 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.UserController.InsertOrUpdateUser (StyleSphereWebAPI) in 7283.2357ms
+[2025-01-17 00:02:30.445 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.UserController.InsertOrUpdateUser (StyleSphereWebAPI)'
+[2025-01-17 00:02:30.446 -05:00  INF]  Request finished HTTP/2 POST https://localhost:7106/api/User/InsertOrUpdateUser application/json 113 - 200 - application/json;+charset=utf-8 7290.0481ms
+[2025-01-17 00:04:26.195 -05:00  INF]  Request starting HTTP/2 OPTIONS https://localhost:7106/api/User/InsertOrUpdateUser - -
+[2025-01-17 00:04:26.195 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:04:26.210 -05:00  INF]  Request finished HTTP/2 OPTIONS https://localhost:7106/api/User/InsertOrUpdateUser - - - 204 - - 14.6772ms
+[2025-01-17 00:04:26.243 -05:00  INF]  Request starting HTTP/2 POST https://localhost:7106/api/User/InsertOrUpdateUser application/json 113
+[2025-01-17 00:04:26.245 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:04:26.258 -05:00  INF]  Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-01-2025 04:22:41', Current time (UTC): '17-01-2025 05:04:26'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2025-01-17 00:04:26.258 -05:00  INF]  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-01-2025 04:22:41', Current time (UTC): '17-01-2025 05:04:26'.
+[2025-01-17 00:04:26.258 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.UserController.InsertOrUpdateUser (StyleSphereWebAPI)'
+[2025-01-17 00:04:26.259 -05:00  INF]  Route matched with {action = "InsertOrUpdateUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InsertOrUpdateUser(StyleSphere.Models.UserModel) on controller StyleSphereWebAPI.Controllers.UserController (StyleSphereWebAPI).
+[2025-01-17 00:04:29.568 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-17 00:04:29.594 -05:00  INF]  Executed DbCommand (24ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedDate], [u].[Deleted], [u].[Email], [u].[Enabled], [u].[FirstName], [u].[LastName], [u].[ModifiedBy], [u].[ModifiedDate], [u].[Password], [u].[PasswordExpiryDate]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__user_Id_0
+[2025-01-17 00:04:29.604 -05:00  INF]  Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedDate], [Deleted], [Email], [Enabled], [FirstName], [LastName], [ModifiedBy], [ModifiedDate], [Password], [PasswordExpiryDate])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+[2025-01-17 00:04:29.605 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-17 00:04:29.606 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.UserController.InsertOrUpdateUser (StyleSphereWebAPI) in 3346.6671ms
+[2025-01-17 00:04:29.606 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.UserController.InsertOrUpdateUser (StyleSphereWebAPI)'
+[2025-01-17 00:04:29.606 -05:00  INF]  Request finished HTTP/2 POST https://localhost:7106/api/User/InsertOrUpdateUser application/json 113 - 200 - application/json;+charset=utf-8 3362.5329ms
+[2025-01-17 00:04:29.667 -05:00  INF]  Request starting HTTP/2 OPTIONS https://localhost:7106/api/NavItems/GetAllNavItems - -
+[2025-01-17 00:04:29.667 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:04:29.667 -05:00  INF]  Request finished HTTP/2 OPTIONS https://localhost:7106/api/NavItems/GetAllNavItems - - - 204 - - 0.6355ms
+[2025-01-17 00:04:29.671 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/NavItems/GetAllNavItems - -
+[2025-01-17 00:04:29.672 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:04:29.674 -05:00  INF]  Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-01-2025 04:22:41', Current time (UTC): '17-01-2025 05:04:29'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2025-01-17 00:04:29.675 -05:00  INF]  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-01-2025 04:22:41', Current time (UTC): '17-01-2025 05:04:29'.
+[2025-01-17 00:04:29.675 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI)'
+[2025-01-17 00:04:29.680 -05:00  INF]  Route matched with {action = "GetAllNavItems", controller = "NavItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllNavItems() on controller StyleSphereWebAPI.Controllers.NavItemsController (StyleSphereWebAPI).
+[2025-01-17 00:04:29.690 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-17 00:04:29.807 -05:00  INF]  Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Name], [n].[Url], [n].[icon] AS [Icon], [n].[SortOrder]
+FROM [NavItems] AS [n]
+WHERE [n].[Enabled] = CAST(1 AS bit)
+ORDER BY [n].[SortOrder]
+[2025-01-17 00:04:29.825 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-17 00:04:29.864 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI) in 183.2042ms
+[2025-01-17 00:04:29.864 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI)'
+[2025-01-17 00:04:29.864 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/NavItems/GetAllNavItems - - - 200 - application/json;+charset=utf-8 193.3534ms
+[2025-01-17 00:05:17.239 -05:00  INF]  Request starting HTTP/2 OPTIONS https://localhost:7106/api/NavItems/GetAllNavItems - -
+[2025-01-17 00:05:17.240 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:05:17.253 -05:00  INF]  Request finished HTTP/2 OPTIONS https://localhost:7106/api/NavItems/GetAllNavItems - - - 204 - - 14.0225ms
+[2025-01-17 00:05:17.284 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/NavItems/GetAllNavItems - -
+[2025-01-17 00:05:17.284 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:05:17.286 -05:00  INF]  Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-01-2025 04:22:41', Current time (UTC): '17-01-2025 05:05:17'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2025-01-17 00:05:17.286 -05:00  INF]  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-01-2025 04:22:41', Current time (UTC): '17-01-2025 05:05:17'.
+[2025-01-17 00:05:17.286 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI)'
+[2025-01-17 00:05:17.286 -05:00  INF]  Route matched with {action = "GetAllNavItems", controller = "NavItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllNavItems() on controller StyleSphereWebAPI.Controllers.NavItemsController (StyleSphereWebAPI).
+[2025-01-17 00:05:17.288 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-17 00:05:17.315 -05:00  INF]  Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Name], [n].[Url], [n].[icon] AS [Icon], [n].[SortOrder]
+FROM [NavItems] AS [n]
+WHERE [n].[Enabled] = CAST(1 AS bit)
+ORDER BY [n].[SortOrder]
+[2025-01-17 00:05:17.315 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-17 00:05:17.316 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI) in 29.2947ms
+[2025-01-17 00:05:17.316 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI)'
+[2025-01-17 00:05:17.316 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/NavItems/GetAllNavItems - - - 200 - application/json;+charset=utf-8 34.4394ms
+[2025-01-17 00:05:30.953 -05:00  INF]  Request starting HTTP/2 OPTIONS https://localhost:7106/api/NavItems/GetAllNavItems - -
+[2025-01-17 00:05:30.954 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:05:30.954 -05:00  INF]  Request finished HTTP/2 OPTIONS https://localhost:7106/api/NavItems/GetAllNavItems - - - 204 - - 1.1293ms
+[2025-01-17 00:05:30.959 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/NavItems/GetAllNavItems - -
+[2025-01-17 00:05:30.960 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:05:30.961 -05:00  INF]  Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-01-2025 04:22:41', Current time (UTC): '17-01-2025 05:05:30'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2025-01-17 00:05:30.962 -05:00  INF]  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-01-2025 04:22:41', Current time (UTC): '17-01-2025 05:05:30'.
+[2025-01-17 00:05:30.962 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI)'
+[2025-01-17 00:05:30.962 -05:00  INF]  Route matched with {action = "GetAllNavItems", controller = "NavItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllNavItems() on controller StyleSphereWebAPI.Controllers.NavItemsController (StyleSphereWebAPI).
+[2025-01-17 00:05:30.966 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-17 00:05:30.970 -05:00  INF]  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Name], [n].[Url], [n].[icon] AS [Icon], [n].[SortOrder]
+FROM [NavItems] AS [n]
+WHERE [n].[Enabled] = CAST(1 AS bit)
+ORDER BY [n].[SortOrder]
+[2025-01-17 00:05:30.971 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-17 00:05:30.971 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI) in 8.9886ms
+[2025-01-17 00:05:30.971 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAllNavItems (StyleSphereWebAPI)'
+[2025-01-17 00:05:30.972 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/NavItems/GetAllNavItems - - - 200 - application/json;+charset=utf-8 12.8940ms
+[2025-01-17 00:06:04.760 -05:00  INF]  Request starting HTTP/2 OPTIONS https://localhost:7106/api/User/VerifyUser?username=Moh@t.com&password=Mohit@123 - -
+[2025-01-17 00:06:04.760 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:06:04.767 -05:00  INF]  Request finished HTTP/2 OPTIONS https://localhost:7106/api/User/VerifyUser?username=Moh@t.com&password=Mohit@123 - - - 204 - - 5.3631ms
+[2025-01-17 00:06:04.778 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/User/VerifyUser?username=Moh@t.com&password=Mohit@123 - -
+[2025-01-17 00:06:04.778 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:06:04.780 -05:00  INF]  Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-01-2025 04:22:41', Current time (UTC): '17-01-2025 05:06:04'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2025-01-17 00:06:04.782 -05:00  INF]  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-01-2025 04:22:41', Current time (UTC): '17-01-2025 05:06:04'.
+[2025-01-17 00:06:04.783 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.UserController.VerifyUser (StyleSphereWebAPI)'
+[2025-01-17 00:06:04.788 -05:00  INF]  Route matched with {action = "VerifyUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult VerifyUser(System.String, System.String) on controller StyleSphereWebAPI.Controllers.UserController (StyleSphereWebAPI).
+[2025-01-17 00:06:04.817 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-17 00:06:04.879 -05:00  INF]  Executed DbCommand (30ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedDate], [u].[Deleted], [u].[Email], [u].[Enabled], [u].[FirstName], [u].[LastName], [u].[ModifiedBy], [u].[ModifiedDate], [u].[Password], [u].[PasswordExpiryDate]
+FROM [Users] AS [u]
+WHERE ((([u].[Enabled] = CAST(1 AS bit)) AND ([u].[Deleted] = CAST(0 AS bit))) AND ([u].[Email] = @__username_0)) AND ([u].[Password] = @__password_1)
+[2025-01-17 00:06:05.068 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-17 00:06:05.069 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.UserController.VerifyUser (StyleSphereWebAPI) in 281.7344ms
+[2025-01-17 00:06:05.070 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.UserController.VerifyUser (StyleSphereWebAPI)'
+[2025-01-17 00:06:05.070 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/User/VerifyUser?username=Moh@t.com&password=Mohit@123 - - - 200 - application/json;+charset=utf-8 291.8255ms
+[2025-01-17 00:06:05.099 -05:00  INF]  Request starting HTTP/2 OPTIONS https://localhost:7106/api/NavItems/GetAdminNavItems - -
+[2025-01-17 00:06:05.099 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:06:05.099 -05:00  INF]  Request finished HTTP/2 OPTIONS https://localhost:7106/api/NavItems/GetAdminNavItems - - - 204 - - 1.3664ms
+[2025-01-17 00:06:05.104 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/NavItems/GetAdminNavItems - -
+[2025-01-17 00:06:05.104 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:06:05.192 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI)'
+[2025-01-17 00:06:05.196 -05:00  INF]  Route matched with {action = "GetAdminNavItems", controller = "NavItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAdminNavItems() on controller StyleSphereWebAPI.Controllers.NavItemsController (StyleSphereWebAPI).
+[2025-01-17 00:06:05.202 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-17 00:06:05.203 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-17 00:06:05.432 -05:00  INF]  Executed DbCommand (113ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name], [a].[Url], [a].[Icon], [a].[SortOrder]
+FROM [AdminNavItems] AS [a]
+WHERE [a].[Enabled] = CAST(1 AS bit)
+ORDER BY [a].[SortOrder]
+[2025-01-17 00:06:05.529 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI) in 332.8166ms
+[2025-01-17 00:06:05.531 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI)'
+[2025-01-17 00:06:05.541 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/NavItems/GetAdminNavItems - - - 200 - application/json;+charset=utf-8 437.4988ms
+[2025-01-17 00:06:07.287 -05:00  INF]  Request starting HTTP/2 OPTIONS https://localhost:7106/api/Products/GetAllProducts - -
+[2025-01-17 00:06:07.287 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:06:07.288 -05:00  INF]  Request finished HTTP/2 OPTIONS https://localhost:7106/api/Products/GetAllProducts - - - 204 - - 0.5927ms
+[2025-01-17 00:06:07.302 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/Products/GetAllProducts - -
+[2025-01-17 00:06:07.303 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:06:07.304 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7106/api/NavItems/GetAdminNavItems - -
+[2025-01-17 00:06:07.305 -05:00  INF]  CORS policy execution successful.
+[2025-01-17 00:06:07.305 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI)'
+[2025-01-17 00:06:07.305 -05:00  INF]  Route matched with {action = "GetAdminNavItems", controller = "NavItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAdminNavItems() on controller StyleSphereWebAPI.Controllers.NavItemsController (StyleSphereWebAPI).
+[2025-01-17 00:06:07.306 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-17 00:06:07.307 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-17 00:06:07.322 -05:00  INF]  Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name], [a].[Url], [a].[Icon], [a].[SortOrder]
+FROM [AdminNavItems] AS [a]
+WHERE [a].[Enabled] = CAST(1 AS bit)
+ORDER BY [a].[SortOrder]
+[2025-01-17 00:06:07.323 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI) in 17.6999ms
+[2025-01-17 00:06:07.323 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.NavItemsController.GetAdminNavItems (StyleSphereWebAPI)'
+[2025-01-17 00:06:07.323 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/NavItems/GetAdminNavItems - - - 200 - application/json;+charset=utf-8 18.9986ms
+[2025-01-17 00:06:07.324 -05:00  INF]  Executing endpoint 'StyleSphereWebAPI.Controllers.ProductsController.GetAllProducts (StyleSphereWebAPI)'
+[2025-01-17 00:06:07.325 -05:00  INF]  Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllProducts() on controller StyleSphereWebAPI.Controllers.ProductsController (StyleSphereWebAPI).
+[2025-01-17 00:06:07.329 -05:00  INF]  Entity Framework Core 6.0.36 initialized 'StyleSphereContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+[2025-01-17 00:06:07.346 -05:00  INF]  Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductName], [p].[ProductDescription], [p].[UnitPrice], [p].[Quantity], [p].[DiscountPercentage], [p].[Title]
+FROM [Products] AS [p]
+WHERE ([p].[Enabled] = CAST(1 AS bit)) AND ([p].[Deleted] = CAST(0 AS bit))
+[2025-01-17 00:06:07.347 -05:00  INF]  Executing OkObjectResult, writing value of type 'StyleSphere.Models.ResponseModel'.
+[2025-01-17 00:06:07.347 -05:00  INF]  Executed action StyleSphereWebAPI.Controllers.ProductsController.GetAllProducts (StyleSphereWebAPI) in 21.2764ms
+[2025-01-17 00:06:07.347 -05:00  INF]  Executed endpoint 'StyleSphereWebAPI.Controllers.ProductsController.GetAllProducts (StyleSphereWebAPI)'
+[2025-01-17 00:06:07.347 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7106/api/Products/GetAllProducts - - - 200 - application/json;+charset=utf-8 44.6349ms

@@ -1,6 +1,9 @@
 <app-ad-header></app-ad-header>
 <div class="display-content-admin">
-    <h4>Product Management</h4>
+    <div class="header-row">
+        <h4 class="flex-grow-1">Product Management</h4>
+        <button class="modify-btn" data-bs-toggle="modal" data-bs-target="#productModal"><i class="fa-solid fa-plus fa-xl me-4" style="font-size: 30px;"></i></button>
+    </div>
     <table mat-table [dataSource]="dataSource" matSort class=" table table-border table-responsive mat-elevation-z8 me-1">
 
         <!-- Position Column -->
@@ -40,3 +43,66 @@
     </table>
 
 </div>
+
+
+
+
+<!-- Button trigger modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">{{editModal? 'Update': 'Add'}} Product</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="productForm">
+            <div class="form-group mb-3">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="name" placeholder="Enter Product Name" required/>
+                <small *ngIf="productForm.controls['name'].dirty && productForm.hasError('required','name')"
+                class="text-danger">Product Name is required</small>
+                <small *ngIf="productForm.controls['name'].hasError('maxlength')" class="text-danger">Name must be smaller than 15 char</small>
+            </div>
+            <div class="form-group mb-3">
+                <label>Title</label>
+                <input type="text" class="form-control" formControlName="title" placeholder="Enter Product Title" required/>
+                <small *ngIf="productForm.controls['title'].dirty && productForm.hasError('required','title')"
+                class="text-danger">Title is required</small>
+            </div>
+            <div class="form-group mb-3">
+                <label>Description</label>
+                <input type="text" class="form-control" formControlName="description" placeholder="Enter Product Description" required/>
+                <small *ngIf="productForm.controls['description'].dirty && productForm.hasError('required','description')"
+                class="text-danger">Description is required</small>
+            </div>
+            <div class="form-group mb-3">
+                <label>Quantity</label>
+                <input type="text" class="form-control" formControlName="quantity" placeholder="Enter Product Quantity" required/>
+                <small *ngIf="productForm.controls['quantity'].dirty && productForm.hasError('required','quantity')"
+                class="text-danger">Quantity is required</small>
+            </div>
+            <div class="form-group mb-3">
+                <label>Unit Price</label>
+                <input type="text" class="form-control" formControlName="unitprice" placeholder="Enter Unit Price" required/>  <!--Only touched is used for validaton not dirty-->
+                <small *ngIf="productForm.controls['unitprice'].touched && productForm.hasError('required','unitprice')"
+                class="text-danger">Unit Price is required</small>
+            </div>
+            <div class="form-group mb-3">
+                <label>Discount</label>
+                <input type="text" class="form-control" formControlName="discount" placeholder="Enter Discount %" required/>
+                <small *ngIf="productForm.controls['discount'].dirty && productForm.hasError('required','discount')"
+                class="text-danger">Discount is required</small>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="close-btn" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="saveProduct()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>

@@ -10,5 +10,6 @@ namespace StyleSphere.Repository.Interface
     public interface IUserRepo
     {
         UserModel VerifyUser(string username, string password);
+        int InsertOrUpdateUser(UserModel user);
     }
 }

@@ -10,6 +10,7 @@ namespace StyleSphere.Services.Interface
     public interface IUserService
     {
         UserModel VerifyUser(string username, string password);
+        int InsertOrUpdateUser(UserModel user);
 
     }
 }

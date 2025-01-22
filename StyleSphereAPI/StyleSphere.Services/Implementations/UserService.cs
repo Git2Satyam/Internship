@@ -17,6 +17,19 @@ namespace StyleSphere.Services.Implementations
             _repo = repo;
         }
 
+        public int InsertOrUpdateUser(UserModel user)
+        {
+            try
+            {
+                return _repo.InsertOrUpdateUser(user);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
         public UserModel VerifyUser(string username, string password)
         {
             try

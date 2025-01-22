@@ -31,7 +31,7 @@ namespace StyleSphereWebAPI.Controllers
             try
             {
                 var result = _userService.VerifyUser(username, password);
-                if(result == null)
+                if(result.Id == 0)
                 {
                     response.Success = false;
                     response.Status = "Failed";
@@ -49,7 +49,7 @@ namespace StyleSphereWebAPI.Controllers
                     var Sectoken = new JwtSecurityToken(_configuration["JWT:Issuer"],
                       _configuration["JWT:Issuer"],
                       claims: claims,
-                      expires: DateTime.Now.AddMinutes(1),
+                      expires: DateTime.Now.AddMinutes(60),
                       signingCredentials: credentials);
 
                     response.Success = true;
@@ -59,6 +59,33 @@ namespace StyleSphereWebAPI.Controllers
                 return Ok(response);
             }
             catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, ex);
+                return BadRequest();
+            }
+        }
+
+        [HttpPost]
+        public IActionResult InsertOrUpdateUser(UserModel model)
+        {
+            var response = new ResponseModel();
+            try
+            {
+                var result = _userService.InsertOrUpdateUser(model);
+                if(result == 0 || result == 1)
+                {
+                    response.Success = true;
+                    response.Status = "Ok";
+                }
+                else
+                {
+                    response.Success= false;
+                    response.Status = "Failed";
+                }
+
+                return Ok(response);
+            }
+            catch(Exception ex)
             {
                 _logger.LogError(ex.Message, ex);
                 return BadRequest();

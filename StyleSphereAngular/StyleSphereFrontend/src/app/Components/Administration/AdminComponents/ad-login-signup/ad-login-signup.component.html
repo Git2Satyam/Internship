@@ -1,23 +1,83 @@
-  <div class="container">
-    <div class="card loginform-card">
-        <div class="card-body ">
-            <h4 class="text-center mb-3"> Login </h4>
-            <form [formGroup]="loginform">
-                <div class="form-group mb-3">
+  <div>
+    <div class="container" *ngIf="!showform"> 
+      <div class="card loginform-card">
+          <div class="card-body">
+              <h4 class="text-center mb-3"> Login </h4>
+              <form [formGroup]="loginform" autocomplete="off">
+                <div class="form-group mb-3 position-relative">
                   <label for="exampleInputEmail1">Username</label>
-                  <input type="email" class="form-control" formControlName="username" placeholder="Enter username">
+                  <div class="input-container">
+                    <i class="fa-solid fa-user input-icon"></i>
+                    <input type="email" class="form-control" formControlName="username" placeholder="Enter username" autocomplete="new-username"/>
+                  </div>
+                  <small 
+                    *ngIf="loginform.controls['username'].dirty && loginform.controls['username'].hasError('required')" 
+                    class="text-danger">Username is required
+                  </small>
+                </div>
+                
+                  <div class="form-group mb-3">
+                    <label for="exampleInputPassword1">Password</label>
+                    <div class="input-container">
+                      <i class="fa-solid fa-eye input-icon"></i>
+                      <input type="password" class="form-control" formControlName="password" placeholder="Password" autocomplete="new-password">
+                    </div>
+                    <small *ngIf="loginform.controls['password'].dirty && loginform.hasError('required','password')"
+                     class="text-danger">Password is required</small>
+                  </div>
+                  <button type="submit" class="btn btn-primary" (click)="validateUser()" [disabled]="loginform.invalid">Submit</button>
+                  <div class="float-end mt-1">
+                     <small>Don't have account?<button (click)="openSignUpForm()" class="modify-btn ps-2 text-primary">SignUp</button></small>
+                  </div>
+                </form>
+          </div>
+      </div>
+    </div>
+  
+    <div class="container mt-4" *ngIf="showform">
+      <div class="card signUpform-card">
+        <div class="card-body">
+            <h4 class="text-center mb-3"> SignUp </h4>
+            <form [formGroup]="signupForm">
+                <div class="form-group mb-3">
+                  <label>FirstName</label>
+                  <input type="text" class="form-control" formControlName="firstname" placeholder="Enter Firstname">
+                  <small *ngIf="signupForm.controls['firstname'].dirty && signupForm.hasError('required','firstname')"
+                   class="text-danger">FirstName is required</small>
                 </div>
                 <div class="form-group mb-3">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                  <label>LastName</label>
+                  <input type="text" class="form-control" formControlName="lastname" placeholder="Enter Lastname">
+                  <small *ngIf="signupForm.controls['lastname'].dirty && signupForm.hasError('required','lastname')"
+                   class="text-danger">LastName is required</small>
                 </div>
-                <button type="submit" class="btn btn-primary" (click)="validateUser()">Submit</button>
+                <div class="form-group mb-3">
+                  <label>Email</label>
+                  <input type="email" class="form-control" formControlName="email" placeholder="Enter Email"autocomplete="new-email">
+                  <small *ngIf="signupForm.controls['email'].dirty && loginform.hasError('required','email')"
+                   class="text-danger">Email is required</small>
+                </div>
+                <div class="form-group mb-3">
+                  <label>Password</label>
+                  <input type="password" class="form-control" formControlName="password" placeholder="Enter Password" autocomplete="new-password">
+                  <small *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')"
+                   class="text-danger">Password is required</small>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label>Confirm Password</label>
+                  <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm your password" autocomplete="new-confirmPassword">
+                  <small *ngIf="signupForm.controls['confirmPassword'].dirty && signupForm.hasError('required','confirmPassword')"
+                   class="text-danger">Confirm Password is required</small>
+                   <small class="text-danger" *ngIf="signupForm.controls['confirmPassword'].errors?.['mustMatch']">Passwords must match</small>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="saveUser()" [disabled]="signupForm.invalid">Submit</button>
               </form>
         </div>
-       
     </div>
-   
+    </div>
   </div>
+ 
 
   <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
 
